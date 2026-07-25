@@ -113,12 +113,11 @@ a {
   box-shadow: 0 4px 12px rgba(212, 165, 116, 0.3);
 }
 
-/* HERO SECTION */
+/* HERO SECTION - HOME PAGE */
 .hero {
   position: relative;
   height: 100vh;
   min-height: 600px;
-  background-image: url('treehouse-project.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -183,6 +182,45 @@ a {
   gap: 1.5rem;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+/* PAGE HERO - INTERNAL PAGES */
+.page-hero {
+  position: relative;
+  height: 450px;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--forest-green) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.page-hero h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 3.5rem;
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px var(--shadow-dark);
+}
+
+.page-hero p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(245, 241, 232, 0.95);
+  text-shadow: 0 2px 4px var(--shadow-dark);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* BUTTONS */
@@ -281,7 +319,7 @@ a {
   border-color: var(--bronze);
 }
 
-/* SERVICE CARDS */
+/* SERVICE CARDS - HOME PAGE */
 .services-preview {
   padding: 3rem 0;
 }
@@ -330,6 +368,222 @@ a {
 .service-card p {
   color: var(--muted);
   font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* SERVICES LIST - SERVICES PAGE */
+.services-list {
+  padding: 6rem 3rem;
+  background: white;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.service-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 6rem;
+  padding-bottom: 6rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.service-row:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.service-row-reverse {
+  direction: rtl;
+}
+
+.service-row-reverse > * {
+  direction: ltr;
+}
+
+.service-image {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.service-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.service-row:hover .service-image img {
+  transform: scale(1.05);
+}
+
+.service-content h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.2rem;
+  color: var(--navy);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.service-number {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+.service-content p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+/* ESTIMATE FORM */
+.estimate-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  padding: 6rem 3rem;
+  background: white;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.form-wrapper {
+  background: var(--cream);
+  padding: 3rem;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--ink);
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.form-note {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 1.5rem;
+  font-style: italic;
+}
+
+/* CONTACT BOX */
+.contact-box {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--forest-green) 100%);
+  padding: 3rem;
+  border-radius: 8px;
+  color: white;
+}
+
+.contact-box .section-label {
+  color: var(--gold);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.contact-box h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  border: 1px solid rgba(212, 165, 116, 0.3);
+  transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+  background: rgba(212, 165, 116, 0.2);
+  border-color: var(--gold);
+  transform: translateX(5px);
+}
+
+.contact-icon {
+  font-size: 2rem;
+  color: var(--gold);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.contact-info strong {
+  font-size: 1rem;
+  font-weight: 700;
+  display: block;
+}
+
+.contact-info small {
+  font-size: 0.85rem;
+  color: rgba(245, 241, 232, 0.8);
+}
+
+.contact-hours {
+  font-size: 0.95rem;
+  color: rgba(245, 241, 232, 0.85);
   line-height: 1.6;
 }
 
@@ -491,7 +745,9 @@ a {
 /* RESPONSIVE DESIGN */
 @media (max-width: 1024px) {
   .intro-section,
-  .projects-section {
+  .projects-section,
+  .services-list,
+  .estimate-section {
     grid-template-columns: 1fr;
     padding: 4rem 2rem;
   }
@@ -510,6 +766,20 @@ a {
 
   .hero h1 {
     font-size: 3.5rem;
+  }
+
+  .service-row,
+  .service-row-reverse {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .service-row-reverse {
+    direction: ltr;
+  }
+
+  .service-row-reverse > * {
+    direction: inherit;
   }
 }
 
@@ -544,17 +814,30 @@ a {
     font-size: 2.8rem;
   }
 
+  .page-hero h1 {
+    font-size: 2.5rem;
+  }
+
   .section-heading {
     grid-template-columns: 1fr;
   }
 
   .cta-section h2,
-  .intro-text h2 {
+  .intro-text h2,
+  .service-content h2 {
     font-size: 2rem;
   }
 
   .site-footer {
     grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-links {
+    flex-direction: column;
   }
 }
 
@@ -576,6 +859,10 @@ a {
     font-size: 2rem;
   }
 
+  .page-hero h1 {
+    font-size: 1.8rem;
+  }
+
   .hero-description {
     font-size: 1rem;
   }
@@ -587,5 +874,13 @@ a {
   .button {
     font-size: 0.8rem;
     padding: 0.8rem 1.5rem;
+  }
+
+  .form-wrapper {
+    padding: 1.5rem;
+  }
+
+  .contact-box {
+    padding: 2rem 1.5rem;
   }
 }
