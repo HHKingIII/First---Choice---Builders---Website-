@@ -396,14 +396,6 @@ a {
   padding-bottom: 0;
 }
 
-.service-row-reverse {
-  direction: rtl;
-}
-
-.service-row-reverse > * {
-  direction: ltr;
-}
-
 .service-image {
   overflow: hidden;
   border-radius: 8px;
@@ -769,18 +761,9 @@ a {
     font-size: 3.5rem;
   }
 
-  .service-row,
-  .service-row-reverse {
+  .service-row {
     grid-template-columns: 1fr;
     gap: 2rem;
-  }
-
-  .service-row-reverse {
-    direction: ltr;
-  }
-
-  .service-row-reverse > * {
-    direction: inherit;
   }
 }
 
