@@ -1,22 +1,174 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Free Estimate | 1st Choice Builders</title><link rel="stylesheet" href="styles.css"></head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Estimate | 1st Choice Builders</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
 <body>
-<header class="site-header"><a class="brand" href="index.html"><img src="assets/logo.png" alt="1st Choice Builders logo"></a><button class="menu-toggle">☰</button><nav class="nav"><a href="index.html">Home</a><a href="services.html">Services</a><a href="projects.html">Projects</a><a href="about.html">About</a><a class="nav-cta" href="estimate.html">Free Estimate</a></nav></header>
-<main>
-<section class="page-hero"><p class="eyebrow">LET'S TALK ABOUT YOUR PROJECT</p><h1>Request a Free Estimate</h1><p>Tell us what you want to build, repair, or create. We'll get back to you to discuss the next steps.</p></section>
-<section class="section form-section">
-<form id="estimateForm" action="mailto:firstchoicebuildersnc@outlook.com" method="post" enctype="text/plain">
-<label>Your Name<input type="text" name="Name" required></label>
-<label>Phone Number<input type="tel" name="Phone" required></label>
-<label>Email Address<input type="email" name="Email" required></label>
-<label>Project Location / City<input type="text" name="Location"></label>
-<label>What type of project do you need?<select name="Project Type"><option>New Construction</option><option>Deck or Porch</option><option>Building / Shed / Barn</option><option>Treehouse / Custom Build</option><option>Hardwood Flooring</option><option>Metal Roofing</option><option>Welding / Repair</option><option>Custom Tool / Knife / Axe</option><option>Other</option></select></label>
-<label>Tell us about your project<textarea name="Project Details" rows="7" required></textarea></label>
-<button class="button primary" type="submit">Send Estimate Request</button>
-<p class="form-note">On the free version, this form opens your email app to send the request. We can upgrade it later to a fully automatic online form without changing the design.</p>
-</form>
-<div class="contact-box"><p class="eyebrow">PREFER TO TALK?</p><h2>Call or email us directly.</h2><a class="big-contact" href="tel:+13367107176">(336) 710-7176</a><a class="big-contact" href="mailto:firstchoicebuildersnc@outlook.com">firstchoicebuildersnc@outlook.com</a><p>Serving Dobson, NC and surrounding areas within approximately 50 miles.</p></div>
-</section>
-<section class="cta"><div><h2>Need to make a payment?</h2><p>We can add a secure online card payment page once your payment provider is set up.</p></div><a class="button secondary" href="mailto:firstchoicebuildersnc@outlook.com?subject=Payment%20Question">Contact Us About Payment</a></section>
-</main>
-<footer class="footer"><div><img src="assets/logo.png" alt="1st Choice Builders logo"><p>Building Your Vision.</p></div><div><h4>Contact</h4><a href="tel:+13367107176">(336) 710-7176</a><a href="mailto:firstchoicebuildersnc@outlook.com">firstchoicebuildersnc@outlook.com</a></div><div><h4>Hours</h4><p>Every day • 8 AM – 6 PM</p></div><div class="copyright">© 2026 1st Choice Builders.</div></footer><script src="script.js"></script></body></html>
+
+  <!-- HEADER / NAVIGATION -->
+  <header class="site-header">
+    <a href="index.html" class="logo-link">
+      <img src="logo.png" alt="1st Choice Builders logo">
+    </a>
+
+    <nav class="main-nav">
+      <a href="index.html">HOME</a>
+      <a href="services.html">SERVICES</a>
+      <a href="projects.html">PROJECTS</a>
+      <a href="about.html">ABOUT</a>
+      <a href="estimate.html">FREE ESTIMATE</a>
+    </nav>
+
+    <div class="header-contact">
+      <a href="tel:3367107176">☎ (336) 710-7176</a>
+      <a href="sms:3367107176" class="header-button">TEXT US</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="hero-overlay"></div>
+      <div class="page-hero-content">
+        <p class="section-label">LET'S TALK ABOUT YOUR PROJECT</p>
+        <h1>Request a Free Estimate</h1>
+        <p>Tell us what you want to build, repair, or create. We'll get back to you within 24 hours to discuss your project and provide a detailed estimate.</p>
+      </div>
+    </section>
+
+    <!-- FORM SECTION -->
+    <section class="estimate-section">
+
+      <div class="form-wrapper">
+        <form id="estimateForm" action="mailto:firstchoicebuildersnc@outlook.com" method="post" enctype="text/plain">
+
+          <div class="form-group">
+            <label for="name">Your Name *</label>
+            <input type="text" id="name" name="Name" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="Phone" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="Email" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="location">Project Location / City</label>
+            <input type="text" id="location" name="Location">
+          </div>
+
+          <div class="form-group">
+            <label for="project-type">What type of project do you need? *</label>
+            <select id="project-type" name="Project Type" required>
+              <option value="">-- Select a service --</option>
+              <option value="New Construction">New Construction</option>
+              <option value="Deck or Porch">Deck or Porch</option>
+              <option value="Building / Shed / Barn">Building / Shed / Barn</option>
+              <option value="Treehouse / Custom Build">Treehouse / Custom Build</option>
+              <option value="Metal Roofing">Metal Roofing</option>
+              <option value="Hardwood Flooring">Hardwood Flooring</option>
+              <option value="Welding / Fabrication">Welding / Fabrication</option>
+              <option value="Repairs / Additions">Repairs / Additions</option>
+              <option value="Other">Other / Custom Project</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="details">Tell us about your project *</label>
+            <textarea id="details" name="Project Details" rows="8" placeholder="Describe your project, including size, materials, timeline, and any specific details..." required></textarea>
+          </div>
+
+          <button type="submit" class="button button-gold">SEND ESTIMATE REQUEST</button>
+
+          <p class="form-note">
+            On the free version, this form opens your email app to send the request. We can upgrade it to a fully automatic online form later without changing the design.
+          </p>
+
+        </form>
+      </div>
+
+      <!-- CONTACT ALTERNATIVE -->
+      <div class="contact-box">
+        <p class="section-label">PREFER TO TALK?</p>
+        <h2>Call or email us directly.</h2>
+        
+        <div class="contact-links">
+          <a href="tel:3367107176" class="contact-link">
+            <span class="contact-icon">☎</span>
+            <span class="contact-info">
+              <strong>(336) 710-7176</strong>
+              <small>Call or Text</small>
+            </span>
+          </a>
+
+          <a href="mailto:firstchoicebuildersnc@outlook.com" class="contact-link">
+            <span class="contact-icon">✉</span>
+            <span class="contact-info">
+              <strong>firstchoicebuildersnc@outlook.com</strong>
+              <small>Email us anytime</small>
+            </span>
+          </a>
+        </div>
+
+        <p class="contact-hours">
+          <strong>Available:</strong> Every day • 8 AM – 6 PM<br>
+          We respond to messages and inquiries the same day when possible.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+      <p class="section-label">READY TO START?</p>
+      <h2>We can't wait to hear about your project.</h2>
+      <p>Free estimates, friendly consultation, and professional craftsmanship — that's what 1st Choice Builders brings to every job.</p>
+      <a href="tel:3367107176" class="button button-gold">☎ CALL NOW FOR IMMEDIATE HELP</a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <img src="logo.png" alt="1st Choice Builders logo">
+      <p>Building Your Vision.</p>
+    </div>
+
+    <div class="footer-contact">
+      <h3>CONTACT</h3>
+      <a href="tel:3367107176">(336) 710-7176</a>
+      <a href="mailto:firstchoicebuildersnc@outlook.com">firstchoicebuildersnc@outlook.com</a>
+    </div>
+
+    <div class="footer-hours">
+      <h3>HOURS</h3>
+      <p>Every day • 8 AM – 6 PM</p>
+      <p>Dobson, NC + surrounding areas</p>
+    </div>
+
+    <div class="footer-links">
+      <h3>QUICK LINKS</h3>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="estimate.html">Free Estimate</a>
+    </div>
+
+    <div class="copyright">
+      © 2026 1st Choice Builders. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
